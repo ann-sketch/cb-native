@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./route/stackNavigator";
+import WelcomeScreen from "./screens/welcomeScreen";
+import { LogBox } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+// Ignore unnecessary warnings
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+]);
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  if (isLoggedIn) {
+    return (
+      <NavigationContainer>
+        <StackNavigator setIsLoggedIn={setIsLoggedIn} />
+      </NavigationContainer>
+    );
+  }
+  return <WelcomeScreen setIsLoggedIn={setIsLoggedIn} />
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

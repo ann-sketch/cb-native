@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "23091368720",
+    "project_id": "job-coach-fab96",
+    "storage_bucket": "job-coach-fab96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23091368720:android:b1a572bfe8131d3a198b95",
+        "android_client_info": {
+          "package_name": "com.ba_nn.jobcoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23091368720-iv6a3l6opa6j7e0mn895h0vph4ehe544.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt8Z0tken4XeHxirVlgfWW5KH889V7ci4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23091368720-iv6a3l6opa6j7e0mn895h0vph4ehe544.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
