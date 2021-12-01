@@ -22,9 +22,9 @@ import javascript from "../assets/img/javascript.png";
 import c from "../assets/img/c.png";
 import ruby from "../assets/img/ruby.png";
 
-import Carousel from "react-native-snap-carousel";
+// import Carousel from "react-native-snap-carousel";
 
-import Svg, { Path } from "react-native-svg";
+// import Svg, { Path } from "react-native-svg";
 import settingIcon from "../assets/img/settingIcon.png";
 
 export default function HomeScreen({ navigation }) {
@@ -88,7 +88,7 @@ export default function HomeScreen({ navigation }) {
         </View>
       </View>
       <View>
-        <Carousel
+        {/* <Carousel
           layout={"default"}
           ref={(ref) => (carousel = ref)}
           data={carouselItems}
@@ -97,7 +97,7 @@ export default function HomeScreen({ navigation }) {
           itemWidth={300}
           renderItem={_renderItem}
           onSnapToItem={(index) => setActiveIndex(index)}
-        />
+        /> */}
       </View>
       <View style={styles.chatBtnContainer}>
         <Pressable style={styles.chatBtn} onPress={()=> navigation.navigate("Chatbot")}>
