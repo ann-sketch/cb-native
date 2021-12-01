@@ -8,11 +8,19 @@ const styles = StyleSheet.create({
     headerC: {
         width: '100%',
         display: 'flex',
-        backgroundColor: 'dodgerblue',
         paddingTop: 30,
         paddingBottom: 8,
-        borderBottomRightRadius: 14,
-        borderBottomLeftRadius: 14,
+        backgroundColor: 'white',
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        shadowColor: "#000",
+        shadowOffset: {
+        width: 0,
+        height: 8,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 10.32,
+    elevation: 16,
     },
     header: {
         width: '100%',
@@ -32,7 +40,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 700,
         marginLeft: 8,
-        color: 'ghostwhite'
+        color: 'dodgerblue'
     },
     profileContainer: {
         display: 'flex',
@@ -46,15 +54,15 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 600,
         marginLeft: 12,
-        color: 'ghostwhite'
+        color: 'black'
     },
     profilePicture: {
         backgroundColor: 'white',
-        width: 70,
-        height: 70,
+        width: 90,
+        height: 90,
         borderRadius: '50%',
         marginRight: 18,
-        borderColor: 'whitesmoke',
+        borderColor: 'dodgerblue',
         borderBottomWidth: 3,
         borderTopWidth: 3,
         borderRightWidth: 3,
@@ -64,13 +72,13 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         marginTop: 14,
+        backgroundColor: 'white',
 
     },
     hT: {
         fontWeight: 700,
         fontSize: 24,
         marginBottom: 8,
-        marginTop: 8,
         marginLeft: 12,
         color: 'black',
     },

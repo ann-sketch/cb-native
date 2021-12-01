@@ -3,7 +3,7 @@ import {View, Text, Switch, Button, Alert} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleLeft, faAngleRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/settingScreen.style';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export default function SettingScreen({ route, navigation }) {
@@ -28,11 +28,17 @@ export default function SettingScreen({ route, navigation }) {
 
     return (
 <View style = {styles.sContainer}>
-           <ScrollView>
+           <ScrollView 
+           vertical={true}
+           pagingEnabled
+           showsVerticalScrollIndicator={false}
+           >
              <View style={styles.headerC}>
-            <View style={styles.header}>                 
+            <View style={styles.header}>  
             <View style={ styles.vheader}>
-                <FontAwesomeIcon icon={ faAngleLeft } color={ 'black' }  size={ 28 }/>
+            <TouchableOpacity onPress={() => navigation.navigate("Home")} > 
+                <FontAwesomeIcon icon={ faAngleLeft } color={ 'dodgerblue' }  size={ 28 }/>
+                </TouchableOpacity>
                 <Text style={styles.sT}>Settings</Text>
                 </View>
                 <FontAwesomeIcon icon={faSearch} size={ 22 }/>
@@ -63,8 +69,8 @@ export default function SettingScreen({ route, navigation }) {
             <View style={styles.sOption}>
                 <Text style={styles.optionsText}>Notifications</Text>
                 <Switch
-                    trackColor={{ false: "#767577", true: "#81b0ff" }}
-                    thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+                    trackColor={{ false: "#767577", true: "dodgerblue" }}
+                    thumbColor={isEnabled ? "dodgerblue" : "#f4f3f4"}
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
@@ -73,8 +79,8 @@ export default function SettingScreen({ route, navigation }) {
             <View style={styles.sOption}>
                 <Text style={styles.optionsText}>Job Updates</Text>
                 <Switch
-                    trackColor={{ false: "#767577", true: "#81b0ff" }}
-                    thumbColor={Enabled ? "#f5dd4b" : "#f4f3f4"}
+                    trackColor={{ false: "#767577", true: "dodgerblue" }}
+                    thumbColor={Enabled ? "dodgerblue" : "#f4f3f4"}
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleswitch}
                     value={Enabled}
