@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from "react-native";
 import * as GoogleSignIn from "expo-google-sign-in";
 
 export default class AuthScreen extends React.Component {
-  state = { user: null };
+  state = { user: null, displayName: null };
 
   componentDidMount() {
     this.initAsync();
@@ -29,6 +29,8 @@ export default class AuthScreen extends React.Component {
     try {
       await GoogleSignIn.askForPlayServicesAsync();
       const { type, user } = await GoogleSignIn.signInAsync();
+      this.setState({displayName:user.displayName})
+      
       if (type === "success") {
         this._syncUserWithStateAsync();
       }
