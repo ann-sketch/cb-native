@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {View, Text, Switch, Button, Alert} from 'react-native';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faAngleLeft, faAngleRight, faSearch } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+// import { faAngleLeft, faAngleRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/settingScreen.style';
-import { ScrollView } from 'react-native-gesture-handler';
+// import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default function SettingScreen({ route, navigation }) {
