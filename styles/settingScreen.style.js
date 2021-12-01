@@ -12,75 +12,6 @@
 
 import { StyleSheet } from "react-native";
 
-// const styles  = StyleSheet.create({ 
-//     container: {
-//         width: '100%',
-//         height: '100%',
-//     },   
-//     backButtonContainer: {
-//         marginTop: 50,
-//         marginLeft: 8,
-//     },
-//     profileContainer: {
-//         alignItems: 'center',
-//     },
-//     profileImageBorder: {
-//         width: 100,
-//         height: 100,
-//         borderRadius: '50%',
-//         borderColor: 'grey',
-//         borderBottomWidth: 3,
-//         borderTopWidth: 3,
-//         borderRightWidth: 3,
-//         borderLeftWidth: 3,
-//         marginTop: 20,
-//         marginBottom: 12,
-//         overflow: 'hidden',
-//     },
-//     text: {
-//         fontSize: 26,
-//         marginBottom: 12,
-//         fontWeight: 600
-//     },
-//     subContainer: {
-//         flexWrap: 'wrap',
-//         borderColor: 'black',
-//         borderTopWidth: 1.8,
-//         padding: 24,
-//         flexDirection: 'column',
-//         borderTopRightRadius: 20,
-//         borderTopLeftRadius: 20,
-//     },
-//     textInput: {
-//         fontSize: 26,
-//         backgroundColor: 'gainsboro',
-//         color: 'black',
-//         borderTopLeftRadius: 14,
-//         borderBottomLeftRadius:14,
-//         borderTopRightRadius: 14,
-//         borderBottomRightRadius: 14,
-//         marginTop: 12,
-//         paddingLeft: 20,
-//         paddingRight: 10,
-//         paddingTop: 10,
-//         paddingBottom: 10,
-//         height: 40,
-//         fontSize: 22,
-//     },
-//     notificationContainer: {
-//         display: 'flex',
-//         flexDirection: 'row',
-//         justifyContent: 'space-between',
-//         marginRight: 20,
-//         marginLeft: 20,
-//         fontSize: 22,
-//     },
-//     t: {
-//         fontSize: 24,
-//         fontWeight: 500,
-//     }
-// });
-
 const styles = StyleSheet.create({
     sContainer: {
         height: '100%',
@@ -184,6 +115,7 @@ const styles = StyleSheet.create({
     footer: {
         display: 'flex',
         alignItems: 'center',
+        marginBottom: 10,
     }
 })
 

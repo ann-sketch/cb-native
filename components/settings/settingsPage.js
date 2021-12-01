@@ -1,27 +1,10 @@
-// import React from 'react'
-// import { View, Text, Button } from "react-native";
-
-// // Setting Screen Styles
-// import styles from '../styles/settingScreen.style';
-
-// export default function SettingScreen({ route }) {
-//     return (
-//       <View style={styles.container}>
-//         <Text>Setting Screen</Text>
-//         {/* Set isLoggedIn state to false when clicked. When isLoggedIn state is false, the welcome page shows automatically designates that the user is not signed in. */}
-//         <Button title="LOGOUT" onPress={() => route.params.setIsLoggedIn(false)} />
-//       </View>
-//     );
-//   }
-
 import React, { useState } from 'react';
 import {View, Text, Switch, Button, Alert} from 'react-native';
+import styles from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleLeft, faAngleRight, faSearch } from '@fortawesome/free-solid-svg-icons';
-import styles from '../styles/settingScreen.style';
-import { ScrollView } from 'react-native-gesture-handler';
 
-const SettingsPage = ({route}) => {
+const SettingsPage = () => {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     const [Enabled, setEnabled] = useState(false);
@@ -37,13 +20,12 @@ const SettingsPage = ({route}) => {
           onPress: () => console.log("Cancel"),
           style: "cancel"
         },
-        { text: "Logout", onPress: () => route.params.setIsLoggedIn(false) }
+        { text: "Logout", onPress: () => console.log("logout") }
       ]
     );
 
     return (
         <View style = {styles.sContainer}>
-          <ScrollView>
             <View style={styles.headerC}>
             <View style={styles.header}>
                 <View style={ styles.vheader}>
@@ -114,7 +96,7 @@ const SettingsPage = ({route}) => {
                 <Button color='tomato' title="Logout" onPress={createTwoButtonAlert} />
             </View>
             </View>
-          </ScrollView>
+            
         </View>
     )
 };
